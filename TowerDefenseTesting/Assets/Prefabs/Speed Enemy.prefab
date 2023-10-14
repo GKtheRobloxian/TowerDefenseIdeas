@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1863690724967378422}
   - component: {fileID: 1863690724967378421}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Speed Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 04faa595726e91047bcc6fb32b6ce76e, type: 2}
+  - {fileID: 2100000, guid: ce74f320096bea642be7b0543013a3a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 088f958cd0530934ea20c91093fc2861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  health: 2
+  speed: 4
   distance: 0
   turnPoints: []

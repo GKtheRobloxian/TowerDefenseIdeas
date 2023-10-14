@@ -17,10 +17,11 @@ public class SpawnEnemies : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int randomEnemies = Random.Range(0, enemies.Length);
         spawnDelay -= Time.deltaTime;
         if (spawnDelay <= 0)
         {
-            GameObject instantiatedEnemy = Instantiate(enemies[Random.Range(0, enemies.Length)], new Vector3(-0.25f, 0.225f, -6.25f), Quaternion.identity);
+            GameObject instantiatedEnemy = Instantiate(enemies[randomEnemies], new Vector3(-0.25f, 0.225f, -6.25f), Quaternion.identity);
             instantiatedEnemy.GetComponent<EnemyScript>().turnPoints = turnPoints;
             spawnDelay = spawnDelayInit;
         }

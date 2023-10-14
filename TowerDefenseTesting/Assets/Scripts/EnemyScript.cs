@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-
+    public float health;
     public float speed;
     public float distance;
     public GameObject[] turnPoints;
@@ -20,6 +20,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (currentTarget > turnPoints.Length-1)
         {
+            GameObject.Find("Management").GetComponent<HealthManager>().UpdateValue(health);
             Destroy(gameObject);
         }
         else
@@ -33,5 +34,14 @@ public class EnemyScript : MonoBehaviour
             }
             distance += Time.deltaTime * speed;
         }
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void Damaged(float damageTaken)
+    {
+        health -= damageTaken;
     }
 }
