@@ -8,11 +8,13 @@ public class EnemyScript : MonoBehaviour
     public float speed;
     public float distance;
     public GameObject[] turnPoints;
+    public int killEarnings;
     int currentTarget = 0;
+    GameObject currencyText;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currencyText = GameObject.Find("CurrencyText");
     }
 
     // Update is called once per frame
@@ -36,6 +38,7 @@ public class EnemyScript : MonoBehaviour
         }
         if (health <= 0)
         {
+            currencyText.GetComponent<CurrencySetter>().ChangeCurrency(killEarnings);
             Destroy(gameObject);
         }
     }

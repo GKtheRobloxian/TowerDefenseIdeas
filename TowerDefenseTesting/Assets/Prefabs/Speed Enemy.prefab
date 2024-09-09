@@ -114,3 +114,4 @@ MonoBehaviour:
   speed: 4
   distance: 0
   turnPoints: []
+  killEarnings: 1

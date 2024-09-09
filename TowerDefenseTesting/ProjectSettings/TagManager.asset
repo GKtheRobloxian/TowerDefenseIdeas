@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Trail
   - Enemy
+  - Placeable
   layers:
   - Default
   - TransparentFX
